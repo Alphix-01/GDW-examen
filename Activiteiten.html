@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOM Aventus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-neutral-200">
+    <!-- Navbar PC-->
+    <div id="navbar" class="hidden bg-red-700 lg:flex flex-row justify-between text-2xl font-semibold text-white max-h-[100px] items-center">
+        <!-- <img src="https://placehold.co/389x90"> -->
+        <img src="/Logo.png" alt="VOMAventus" class="ml-[100px] max-w-[389px] max-h-[90px]">
+        <a href="/Activiteiten.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Activiteiten</a>
+        <a href="/Fotogalerij.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Fotogalerij</a>
+        <a href="/Nieuwsbrief.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Nieuwsbrief</a>
+        <a class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Archief</a>
+        <a href="/Over-ons.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px] mr-[100px]">Over Ons</a>
+    </div>
+
+    <!-- Navbar mobile -->
+    <div id="navbar" class="lg:hidden bg-red-700 flex flex-row justify-between max-h-[100px] items-center z-20">
+        <!-- <img src="https://placehold.co/389x90"> -->
+        <img src="/Logo.png" alt="VOMAventus" class="ml-[50px] max-w-[259px] max-h-[60px]">
+        <label id="hamburger" class="lg:hidden mr-[50px]">
+            <input type="checkbox">
+        </label>
+    </div>
+    <div id="navbar2" class="lg:hidden ml-auto bg-red-700 flex flex-col flex w-[50%] text-2xl font-semibold text-white py-[25px] z-10">
+        <a href="/Activiteiten.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Activiteiten</a>
+        <a href="/Fotogalerij.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Fotogalerij</a>
+        <a href="/Nieuwsbrief.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Nieuwsbrief</a>
+        <a class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Archief</a>
+        <a href="/Over-ons.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Over Ons</a>
+    </div>
+</body>
+</html>
