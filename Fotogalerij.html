@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOM Aventus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<script>
+    const galleries = {
+        event1: [
+            'https://placehold.co/1000x600?text=Event+1+Photo+1',
+            'https://placehold.co/1000x600?text=Event+1+Photo+2',
+            'https://placehold.co/1000x600?text=Event+1+Photo+3'
+        ],
+        event2: [
+            'https://placehold.co/1000x600?text=Event+2+Photo+1',
+            'https://placehold.co/1000x600?text=Event+2+Photo+2'
+        ],
+        event3: [
+            'https://placehold.co/1000x600?text=Event+3+Photo+1'
+        ]
+    };
+
+    function openLightbox(imageSrc) {
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+
+        img.src = imageSrc;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+    }
+
+    // Close when clicking outside the image
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+</script>
+
+<!-- Lightbox Gallery -->
+<div id="lightbox"
+    class="fixed inset-0 bg-black/85 h-[75%] mt-[90px] hidden items-center justify-center z-50 select-none">
+
+    <div class="relative max-w-5xl w-full p-6">
+
+        <!-- Close -->
+        <button onclick="closeLightbox()"
+            class="absolute top-4 right-4 text-3xl font-bold text-white hover:text-black">
+            ✕
+        </button>
+
+        <!-- Previous -->
+        <button onclick="prevImage()"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-4xl font-bold text-white hover:text-black">
+            ‹
+        </button>
+
+        <!-- Next -->
+        <button onclick="nextImage()"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-4xl font-bold text-white hover:text-black">
+            ›
+        </button>
+
+        <!-- Image -->
+        <img id="lightbox-img"
+            class="mx-auto max-h-[80vh] object-contain"
+            draggable="false">
+    </div>
+</div>
+
+<script>
+    let currentGallery = [];
+    let currentIndex = 0;
+    let startX = 0;
+
+    function openGallery(galleryName) {
+        currentGallery = galleries[galleryName];
+        currentIndex = 0;
+        updateImage();
+
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+    }
+
+    function updateImage() {
+        document.getElementById('lightbox-img').src =
+            currentGallery[currentIndex];
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        updateImage();
+    }
+
+    function prevImage() {
+        currentIndex =
+            (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        updateImage();
+    }
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+        if (document.getElementById('lightbox').classList.contains('hidden')) return;
+
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Click outside image to close
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+        if (e.target === this) closeLightbox();
+    });
+
+    // Touch swipe support
+    const img = document.getElementById('lightbox-img');
+
+    img.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+    });
+
+    img.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > 50) {
+            diff > 0 ? nextImage() : prevImage();
+        }
+    });
+</script>
+
+<body class="bg-neutral-200">
+    <!-- Navbar PC-->
+    <div id="navbar" class="hidden bg-red-700 lg:flex flex-row justify-between text-2xl font-semibold text-white items-center">
+        <a href="/index.html"><img src="/Logo.png" alt="VOMAventus" class="ml-[100px] max-w-[389px] max-h-[90px]"></a>
+        <a href="/Activiteiten.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Activiteiten</a>
+        <a href="/Fotogalerij.html" class="px-[1%] bg-red-900 hover:bg-red-900 focus:bg-red-900 py-[32px]">Fotogalerij</a>
+        <a href="/Nieuwsbrief.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Nieuwsbrief</a>
+        <a class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Archief</a>
+        <a href="/Over-ons.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px] mr-[100px]">Over Ons</a>
+    </div>
+
+    <!-- Navbar mobile -->
+    <div id="navbar" class="lg:hidden bg-red-700 flex flex-row justify-between max-h-[100px] items-center relative">
+        <img src="/Logo.png" alt="VOMAventus" class="ml-[50px] max-w-[259px] max-h-[60px]">
+        <label id="hamburger" class="lg:hidden mr-[50px]">
+            <input type="checkbox">
+        </label>
+    </div>
+    <div id="navbar2" class="lg:hidden ml-auto bg-red-700 flex flex-col flex w-[50%] text-2xl font-semibold text-white py-[25px] border-t border-white absolute right-0">
+        <a href="/index.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Thuis</a>
+        <a href="/Activiteiten.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Activiteiten</a>
+        <a href="/Fotogalerij.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Fotogalerij</a>
+        <a href="/Nieuwsbrief.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Nieuwsbrief</a>
+        <a class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Archief</a>
+        <a href="/Over-ons.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Over Ons</a>
+    </div>
+
+    <content class="m-[50px] lg:m-[100px] flex flex-col">
+
+                <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                    <div class="flex flex-col items-start pl-[50px] p-[23px] max-w-[600px]">
+                        <h1 class="text-xl font-bold pb-[23px] mb-[23px] border-b border-black">titel</h1>
+                        <p class="text-base text-cyan-600">datum</p>
+                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button>
+                            <a href="#" onclick="openGallery('event1')" class="inline-block text-xl text-white font-bold bg-red-700 py-[9px] px-[25px] mt-[23px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Bekijk foto's</a>
+                        </button>
+                    </div>
+                    <img class="h-full ml-[100px]" src="https://placehold.co/275" alt="cover foto">
+                </div>
+                    
+                <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                    <div class="flex flex-col items-start pl-[50px] p-[23px] max-w-[600px]">
+                        <h1 class="text-xl font-bold pb-[23px] mb-[23px] border-b border-black">titel</h1>
+                        <p class="text-base text-cyan-600">datum</p>
+                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button>
+                            <a href="#" onclick="openGallery('event2')" class="inline-block text-xl text-white font-bold bg-red-700 py-[9px] px-[25px] mt-[23px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Bekijk foto's</a>
+                        </button>
+                    </div>
+                    <img class="h-full ml-[100px]" src="https://placehold.co/275" alt="cover foto">
+                </div>
+
+                <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                    <div class="flex flex-col items-start pl-[50px] p-[23px] max-w-[600px]">
+                        <h1 class="text-xl font-bold pb-[23px] mb-[23px] border-b border-black">titel</h1>
+                        <p class="text-base text-cyan-600">datum</p>
+                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button>
+                            <a href="#" onclick="openGallery('event3')" class="inline-block text-xl text-white font-bold bg-red-700 py-[9px] px-[25px] mt-[23px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Bekijk foto's</a>
+                        </button>
+                    </div>
+                    <img class="h-full ml-[100px]" src="https://placehold.co/275" alt="cover foto">
+                </div>
+
+                <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                    <div class="flex flex-col items-start pl-[50px] p-[23px] max-w-[600px]">
+                        <h1 class="text-xl font-bold pb-[23px] mb-[23px] border-b border-black">titel</h1>
+                        <p class="text-base text-cyan-600">datum</p>
+                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button>
+                            <a href="#" onclick="openGallery('event4')" class="inline-block text-xl text-white font-bold bg-red-700 py-[9px] px-[25px] mt-[23px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Bekijk foto's</a>
+                        </button>
+                    </div>
+                    <img class="h-full ml-[100px]" src="https://placehold.co/275" alt="cover foto">
+                </div>
+
+                <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                    <div class="flex flex-col items-start pl-[50px] p-[23px] max-w-[600px]">
+                        <h1 class="text-xl font-bold pb-[23px] mb-[23px] border-b border-black">titel</h1>
+                        <p class="text-base text-cyan-600">datum</p>
+                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button>
+                            <a href="#" onclick="openGallery('event5')" class="inline-block text-xl text-white font-bold bg-red-700 py-[9px] px-[25px] mt-[23px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Bekijk foto's</a>
+                        </button>
+                    </div>
+                    <img class="h-full ml-[100px]" src="https://placehold.co/275" alt="cover foto">
+                </div>
+
+                <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                    <div class="flex flex-col items-start pl-[50px] p-[23px] max-w-[600px]">
+                        <h1 class="text-xl font-bold pb-[23px] mb-[23px] border-b border-black">titel</h1>
+                        <p class="text-base text-cyan-600">datum</p>
+                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button>
+                            <a href="#" onclick="openGallery('event6')" class="inline-block text-xl text-white font-bold bg-red-700 py-[9px] px-[25px] mt-[23px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Bekijk foto's</a>
+                        </button>
+                    </div>
+                    <img class="h-full ml-[100px]" src="https://placehold.co/275" alt="cover foto">
+                </div>
+    </content>
+    
+    <footer class="bg-red-700 w-full text-end">
+        <p class="lg:text-xl text text-white mx-[100px] py-[5px]">Met trots aangedreven door WordPress. Ontworpen door Iza Maes.</p>
+    </footer>
+</body>
+</html>

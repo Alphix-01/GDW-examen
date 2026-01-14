@@ -10,30 +10,167 @@
 
 <body class="bg-neutral-200">
     <!-- Navbar PC-->
-    <div id="navbar" class="hidden bg-red-700 lg:flex flex-row justify-between text-2xl font-semibold text-white max-h-[100px] items-center">
-        <!-- <img src="https://placehold.co/389x90"> -->
-        <img src="/Logo.png" alt="VOMAventus" class="ml-[100px] max-w-[389px] max-h-[90px]">
-        <a href="/Activiteiten.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Activiteiten</a>
-        <a href="/Fotogalerij.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Fotogalerij</a>
-        <a href="/Nieuwsbrief.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Nieuwsbrief</a>
-        <a class="hover:bg-red-900 focus:bg-red-900 py-[32px]">Archief</a>
-        <a href="/Over-ons.html" class="hover:bg-red-900 focus:bg-red-900 py-[32px] mr-[100px]">Over Ons</a>
+    <div id="navbar" class="hidden bg-red-700 lg:flex flex-row justify-between text-2xl font-semibold text-white items-center">
+        <a href="/index.html"><img src="/Logo.png" alt="VOMAventus" class="ml-[100px] max-w-[389px] max-h-[90px]"></a>
+        <a href="/Activiteiten.html" class="px-[1%] bg-red-900 hover:bg-red-900 focus:bg-red-900 py-[32px]">Activiteiten</a>
+        <a href="/Fotogalerij.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Fotogalerij</a>
+        <a href="/Nieuwsbrief.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Nieuwsbrief</a>
+        <a class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Archief</a>
+        <a href="/Over-ons.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px] mr-[100px]">Over Ons</a>
     </div>
 
     <!-- Navbar mobile -->
-    <div id="navbar" class="lg:hidden bg-red-700 flex flex-row justify-between max-h-[100px] items-center z-20">
-        <!-- <img src="https://placehold.co/389x90"> -->
+    <div id="navbar" class="lg:hidden bg-red-700 flex flex-row justify-between max-h-[100px] items-center relative">
         <img src="/Logo.png" alt="VOMAventus" class="ml-[50px] max-w-[259px] max-h-[60px]">
         <label id="hamburger" class="lg:hidden mr-[50px]">
             <input type="checkbox">
         </label>
     </div>
-    <div id="navbar2" class="lg:hidden ml-auto bg-red-700 flex flex-col flex w-[50%] text-2xl font-semibold text-white py-[25px] z-10">
+    <div id="navbar2" class="lg:hidden ml-auto bg-red-700 flex flex-col flex w-[50%] text-2xl font-semibold text-white py-[25px] border-t border-white absolute right-0">
+        <a href="/index.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Thuis</a>
         <a href="/Activiteiten.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Activiteiten</a>
         <a href="/Fotogalerij.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Fotogalerij</a>
         <a href="/Nieuwsbrief.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Nieuwsbrief</a>
         <a class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Archief</a>
         <a href="/Over-ons.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Over Ons</a>
     </div>
+
+    <content class="m-[50px] lg:m-[100px] flex flex-col lg:grid lg:grid-cols-4 lg:grid-rows-[auto_auto] gap-[50px] lg:gap-[100px]">
+        <div class="lg:col-span-2 flex flex-col gap-[100px]">
+            <!-- activiteiten agenda -->
+            <div class="lg:col-span-2 lg:row-span-1 flex flex-col">
+                <div class="flex flex-row justify-between items-center">
+                    <div>
+                        <h1 class="text-3xl text-red-700 font-bold">Activiteitenagenda</h1>
+                        <p class="text-base">Laatst bijgewerkt op: [datum]</p>
+                    </div>
+                    <a href="" class="inline-block text-xl text-white font-bold bg-red-700 py-[9px] px-[35px] mt-[20px] rounded-xl shadow-md shadow-black/25/25 hover:bg-red-900 focus:bg-red-900">Download PDF</a>
+                </div>
+
+                <div>
+                    <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                        <div class="flex flex-col pl-[50px]">
+                            <h1 class="text-xl font-bold">titel</h1>
+                            <p class="text-base text-cyan-600">datum</p>
+                        </div>
+                        <img class="h-full" src="https://placehold.co/90x90" alt="cover foto">
+                    </div>
+                    
+                    <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                        <div class="flex flex-col pl-[50px]">
+                            <h1 class="text-xl font-bold">titel</h1>
+                            <p class="text-base text-cyan-600">datum</p>
+                        </div>
+                        <img class="h-full" src="https://placehold.co/90x90" alt="cover foto">
+                    </div>
+
+                    <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                        <div class="flex flex-col pl-[50px]">
+                            <h1 class="text-xl font-bold">titel</h1>
+                            <p class="text-base text-cyan-600">datum</p>
+                        </div>
+                        <img class="h-full" src="https://placehold.co/90x90" alt="cover foto">
+                    </div>
+
+                    <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                        <div class="flex flex-col pl-[50px]">
+                            <h1 class="text-xl font-bold">titel</h1>
+                            <p class="text-base text-cyan-600">datum</p>
+                        </div>
+                        <img class="h-full" src="https://placehold.co/90x90" alt="cover foto">
+                    </div>
+
+                    <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                        <div class="flex flex-col pl-[50px]">
+                            <h1 class="text-xl font-bold">titel</h1>
+                            <p class="text-base text-cyan-600">datum</p>
+                        </div>
+                        <img class="h-full" src="https://placehold.co/90x90" alt="cover foto">
+                    </div>
+
+                    <div class="mt-[23px] bg-white border border-black rounded-xl flex flex-row justify-between items-center overflow-hidden shadow-md shadow-black/25">
+                        <div class="flex flex-col pl-[50px]">
+                            <h1 class="text-xl font-bold">titel</h1>
+                            <p class="text-base text-cyan-600">datum</p>
+                        </div>
+                        <img class="h-full" src="https://placehold.co/90x90" alt="cover foto">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-2 flex flex-col gap-[100px]">
+            <!-- Vorige activiteiten -->
+            <div class="lg:col-span-2 lg:col-start-4 lg:row-start-2 bg-white py-[23px] px-[50px] rounded-3xl shadow-md shadow-black/25">
+                <h1 class="text-3xl text-center font-bold pb-[23px] border-b border-black">Vorige Activiteiten</h1>
+
+                <div class="mt-[46px] bg-neutral-200 border border-black rounded-xl flex lg:flex-row flex-col justify-between shadow-inner shadow-black/25 overflow-hidden">
+                    <div class="flex flex-col py-[20px] px-[50px]">
+                        <h1 class="text-lg font-bold">titel</h1>
+                        <p class="text-sm text-cyan-600">datum</p>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <img class="lg:h-[190px] lg:w-[190px] h-[50%] w-[50%] my-[50px] ml-[25%] lg:my-[0px] lg:ml-[50px]" src="https://placehold.co/90x90" alt="cover foto">
+                </div>
+                <div class="mt-[23px] bg-neutral-200 border border-black rounded-xl flex lg:flex-row flex-col justify-between shadow-inner shadow-black/25 overflow-hidden">
+                    <div class="flex flex-col py-[20px] px-[50px]">
+                        <h1 class="text-lg font-bold">titel</h1>
+                        <p class="text-sm text-cyan-600">datum</p>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <img class="lg:h-[190px] lg:w-[190px] h-[50%] w-[50%] my-[50px] ml-[25%] lg:my-[0px] lg:ml-[50px]" src="https://placehold.co/90x90" alt="cover foto">
+                </div>
+                <div class="mt-[23px] bg-neutral-200 border border-black rounded-xl flex lg:flex-row flex-col justify-between shadow-inner shadow-black/25 overflow-hidden">
+                    <div class="flex flex-col py-[20px] px-[50px]">
+                        <h1 class="text-lg font-bold">titel</h1>
+                        <p class="text-sm text-cyan-600">datum</p>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <img class="lg:h-[190px] lg:w-[190px] h-[50%] w-[50%] my-[50px] ml-[25%] lg:my-[0px] lg:ml-[50px]" src="https://placehold.co/90x90" alt="cover foto">
+                </div>
+                <div class="mt-[23px] bg-neutral-200 border border-black rounded-xl flex lg:flex-row flex-col justify-between shadow-inner shadow-black/25 overflow-hidden">
+                    <div class="flex flex-col py-[20px] px-[50px]">
+                        <h1 class="text-lg font-bold">titel</h1>
+                        <p class="text-sm text-cyan-600">datum</p>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <img class="lg:h-[190px] lg:w-[190px] h-[50%] w-[50%] my-[50px] ml-[25%] lg:my-[0px] lg:ml-[50px]" src="https://placehold.co/90x90" alt="cover foto">
+                </div>
+                <div class="mt-[23px] bg-neutral-200 border border-black rounded-xl flex lg:flex-row flex-col justify-between shadow-inner shadow-black/25 overflow-hidden">
+                    <div class="flex flex-col py-[20px] px-[50px]">
+                        <h1 class="text-lg font-bold">titel</h1>
+                        <p class="text-sm text-cyan-600">datum</p>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <img class="lg:h-[190px] lg:w-[190px] h-[50%] w-[50%] my-[50px] ml-[25%] lg:my-[0px] lg:ml-[50px]" src="https://placehold.co/90x90" alt="cover foto">
+                </div>
+            
+                    <a href="/Fotogalerij.html" class="inline-block ml-[30%] text-xl text-white font-bold bg-red-700 py-[9px] px-[25px] mt-[23px] rounded-xl shadow-md shadow-black/25/25 hover:bg-red-900 focus:bg-red-900">Naar Albums →</a>
+            </div>
+
+            <!-- meedoen? -->
+            <div class="lg:col-span-2 lg:col-start-4 lg:row-start-2 bg-white py-[23px] px-[50px] rounded-3xl shadow-md shadow-black/25">
+                <h1 class="text-[32px] text-center font-bold pb-[23px] border-b border-black">Meedoen?</h1>
+                <p class="py-[23px] border-b border-black">Je krijgt van elke activiteit een aankondiging per mail. Heb je geen aankondiging ontvangen? Meld het 
+                    via <a href="" class="text-red-700">activiteit@vom-aventus.nl</a><br><br>
+                Je kunt je aanmelden voor activiteiten via <a href="" class="text-red-700">activiteit@vom-aventus.nl</a>  o.v.v. 
+                activiteit en datum en gelijktijdige betaling van de kosten op bankrekeningnummer 
+                NL16INGB 0003290651 t.n.v. Vereniging van Oud-medewerkers ROC Aventus (ook met vermelding 
+                van de activiteit en datum)</p>
+
+                <h1 class="text-lg pt-[23px] font-bold">Disclaimer</h1>
+                <p class="pb-[23px]">Deelname aan de excursies die de VOM via de Activiteitencommissie aanbiedt, 
+                    is voor eigen risico. De VOM of de Activiteitencommissie kunnen in deze niet worden aangesproken; 
+                    de verantwoordelijkheid berust bij de deelnemers zelf. De VOM is niet aansprakelijk voor schade, 
+                    van welke aard dan ook, die voortvloeit uit of samenhangt met deze zelf geboekte excursies.</p>
+            </div>
+
+        </div>
+
+
+    </content>
+    <footer class="bg-red-700 w-full text-end lg:mt-[-100px]">
+        <p class="lg:text-xl text text-white mx-[100px] py-[5px]">Met trots aangedreven door WordPress. Ontworpen door Iza Maes.</p>
+    </footer>
 </body>
 </html>
