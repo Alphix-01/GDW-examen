@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOM Aventus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-neutral-200">
+    <!-- Navbar PC-->
+    <div id="navbar" class="hidden bg-red-700 lg:flex flex-row justify-between text-2xl font-semibold text-white items-center">
+        <a href="/index.html"><img src="/Logo.png" alt="VOMAventus" class="ml-[100px] max-w-[389px] max-h-[90px]"></a>
+        <a href="/Activiteiten.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Activiteiten</a>
+        <a href="/Fotogalerij.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Fotogalerij</a>
+        <a href="/Nieuwsbrief.html" class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Nieuwsbrief</a>
+        <a class="px-[1%] hover:bg-red-900 focus:bg-red-900 py-[32px]">Archief</a>
+        <a href="/Over-ons.html" class="px-[1%] bg-red-900 hover:bg-red-900 focus:bg-red-900 py-[32px] mr-[100px]">Over Ons</a>
+    </div>
+
+    <!-- Navbar mobile -->
+    <div id="navbar" class="lg:hidden bg-red-700 flex flex-row justify-between max-h-[100px] items-center relative">
+        <img src="/Logo.png" alt="VOMAventus" class="ml-[50px] max-w-[259px] max-h-[60px]">
+        <label id="hamburger" class="lg:hidden mr-[50px]">
+            <input type="checkbox">
+        </label>
+    </div>
+    <div id="navbar2" class="lg:hidden ml-auto bg-red-700 flex flex-col flex w-[50%] text-2xl font-semibold text-white py-[25px] border-t border-white absolute right-0">
+        <a href="/index.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Thuis</a>
+        <a href="/Activiteiten.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Activiteiten</a>
+        <a href="/Fotogalerij.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Fotogalerij</a>
+        <a href="/Nieuwsbrief.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Nieuwsbrief</a>
+        <a class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Archief</a>
+        <a href="/Over-ons.html" class="py-[25px] px-[50px] hover:bg-red-900 focus:bg-red-900">Over Ons</a>
+    </div>
+
+    <content class="m-[50px] lg:m-[100px] flex flex-col lg:grid lg:grid-cols-5 lg:grid-rows-[auto_auto] gap-[50px] lg:gap-[100px]">
+
+        <div class="lg:col-span-3 flex flex-col gap-[50px] lg:gap-[100px]">
+
+            <!-- verhaal over vereniging -->
+            <div class="lg:col-span-3 lg:row-span-1">
+                <h1 class="text-3xl text-red-700 font-bold">Onze vereniging</h1>
+                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus non libero vitae 
+                    fermentum. Donec sit amet lorem vitae nisl scelerisque viverra. Duis ut tortor nec quam tincidunt ornare eget eget tellus. 
+                    Fusce ornare iaculis ipsum, ac pretium dui sodales in. Morbi bibendum vulputate sapien non ornare. Maecenas nec malesuada ligula. 
+                    Nunc dignissim at odio id elementum. Pellentesque placerat nec leo eu sagittis. Donec ultricies, libero a tincidunt auctor, nisl 
+                    lacus malesuada tortor, eu egestas eros nunc sit amet libero.<br><br> Sed elit enim, consequat vitae nunc ac, hendrerit 
+                    finibus dolor. Quisque quis magna dui. Sed eleifend vestibulum accumsan. Sed ultricies egestas ex, in ultricies libero 
+                    fermentum molestie. Nulla fringilla commodo mauris, quis lacinia velit lobortis sit amet. Vestibulum nec eleifend sem. 
+                    Maecenas aliquet egestas sapien. Mauris a accumsan odio. Donec eu porttitor mauris, sit amet tempor ipsum. Quisque consectetur 
+                    gravida tristique. Vestibulum fermentum felis vitae placerat viverra. Pellentesque sed urna sed leo tempor dignissim. Vivamus 
+                    tincidunt velit libero, eu venenatis enim sagittis ac. Maecenas varius nibh velit, at lobortis metus pretium sed. Sed eget urna 
+                    quis enim dignissim consectetur. Aliquam nec sem augue.<br><br> Aenean commodo, quam non blandit efficitur, diam arcu tincidunt 
+                    tortor, nec dictum ipsum lectus at nibh. Integer ultrices felis sit amet massa feugiat gravida. Maecenas porta lectus dolor, 
+                    a tincidunt lacus sagittis vitae. Cras scelerisque erat id pulvinar convallis. Aliquam blandit, magna vel finibus laoreet, elit 
+                    odio ullamcorper turpis, vitae mattis nisi felis vulputate urna. Suspendisse felis diam, fringilla sed libero aliquam, aliquam 
+                    sodales mauris. Vestibulum lacus ante, laoreet vel orci ut, ornare tristique lectus. Pellentesque habitant morbi tristique 
+                    senectus et netus et malesuada fames ac turpis egestas.
+                </p>
+            </div>
+
+            <!-- header -->
+            <img class="lg:col-span-3 lg:row-span-1 rounded-lg shadow-md shadow-black/25" src="/Hero-header.jpg" alt="Aventus Apeldoorn, Aventus Deventer, Aventus Zutphen.">
+
+            <!-- avg/lidmaatschap -->
+            <div class="lg:col-span-3 lg:row-span-1">
+                <h1 class="text-3xl text-red-700 font-bold">AVG/Lidmaatschap</h1>
+                <p class="text-xl">
+                    Het lidmaatschap loopt per kalenderjaar. Je betaalt per kalenderjaar € 17,50 (bij startdatum op of na 1 juli: € 8,75). 
+                    Acties: het eerste halfjaar is gratis + bij inschrijving een kortingsbon van € 5,00 t.b.v. deelname aan een activiteit.<br>
+                    Wij gaan zorgvuldig met je gegevens om en houden ons aan de AVG (Algemene Verordening Gegevensbescherming)
+                </p><br>
+                <ul class="text-xl list-disc pl-6">
+                    <li>Privacyverklaring van VOM Aventus</li>
+                    <li>Toestemmingsverklaring VOM-leden</li>
+                </ul><br>
+                <p class="text-xl">Wijzigen kan en mag op ieder moment.</p>
+            </div>
+
+            <!-- disclaimer -->
+            <div class="lg:col-span-3 lg:row-span-1">
+                <h1 class="text-3xl text-red-700 font-bold">Disclaimer</h1>
+                <p class="text-xl">Door de website van VOM Aventus te gebruiken, stem je automatisch in met deze disclaimer.</p><br>
+                <ul class="text-xl list-disc pl-6">
+                    <li>De website is bedoeld voor particulier gebruik en is met zorg samengesteld. De inhoud wordt regelmatig 
+                        geactualiseerd en/of aangevuld. Het blijft echter mensenwerk en VOM Aventus aanvaardt geen aansprakelijkheid 
+                        ten aanzien van onjuistheden. Op de website tref je soms koppelingen aan naar derden. VOM Aventus is niet 
+                        verantwoordelijk voor de inhoud van deze gekoppelde websites of bestanden. Te allen tijde kan VOM Aventus, met of 
+                        zonder kennisgeving, de inhoud van de website en disclaimer wijzigen of de site beëindigen.</li><br>
+
+                    <li>Het auteursrecht van beeldmateriaal en teksten berust bij VOM Aventus dan wel haar licentiegevers. 
+                        Wil je beeldmateriaal en/of teksten van onze site overnemen om te gebruiken op publiekelijk toegankelijke plaatsen, 
+                        dan word je geacht daarvoor schriftelijk toestemming te vragen 
+                        <a class="text-red-700 underline" href="mailto:algemeen@vom-aventus.nl">(via algemeen@vom-aventus.nl)</a>. Een kopie voor privégebruik 
+                        is altijd toegestaan.</li><br>
+
+                    <li>VOM Aventus sluit elke aansprakelijkheid uit ten aanzien van directe of indirecte schade die 
+                        voortvloeit uit het gebruik van deze website. VOM Aventus behoudt zich alle rechten voor. © VOM Aventus - 
+                        2022 NB</li>
+                </ul><br>
+                <p class="text-xl">Kom je onjuistheden tegen op deze website dan stellen we melding daarvan op prijs 
+                    <a class="text-red-700 underline" href="mailto:algemeen@vom-aventus.nl">(via algemeen@vom-aventus.nl)</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="lg:col-span-2 flex flex-col gap-[100px]">
+            <!-- Leden -->
+            <div class="lg:col-span-2 lg:col-start-4 lg:row-start-2 bg-white py-[23px] px-[50px] rounded-3xl shadow-md shadow-black/25">
+                <h1 class="text-2xl font-bold pb-[23px] border-b border-black">Bestuur</h1>
+                <div class="lg:grid lg:grid-cols-2 flex flex-col gap-50px m-[23px]">
+                    <i class="mb-[23px]">Roy Nagel</i>
+                        <i class="mb-[23px]">voorzitter, verbindingsman activiteitencommissie</i>
+                    <i class="mb-[23px]">Hanneke Vellinga</i>
+                        <i class="mb-[23px]">secretaris, lid communicatiecommissie</i>
+                    <i class="mb-[23px]">Frank Spallek</i>
+                        <i class="mb-[23px]">penningmeester</i>
+                    <i class="mb-[23px]">Nell Spies</i>
+                        <i class="mb-[23px]">lid communicatiecommissie</i>
+                    <i class="mb-[23px]">Jan Gerritsen</i>
+                        <i class="mb-[23px]">lid communicatiecommissie</i>
+                </div>
+                
+                <h1 class="text-2xl font-bold py-[23px] border-b border-t border-black">Activiteitencommissie</h1>
+                    <div class="llg:grid lg:grid-cols-2 flex flex-col gap-50px m-[23px]">
+                        <i class="mb-[23px]">Annemiek van Benthem</i>
+                            <i class="mb-[23px]">coördinator</i>
+                        <i class="mb-[23px]">Dea Hamming</i>
+                            <i class="mb-[23px]"> </i>
+                        <i class="mb-[23px]">Theo Jansen</i>
+                            <i class="mb-[23px]"> </i>
+                        <i class="mb-[23px]">Wil Koster</i>
+                            <i class="mb-[23px]"> </i>
+                    </div>
+
+                <h1 class="text-2xl font-bold py-[23px] border-b border-t border-black">Communicatiecommissie</h1>
+                    <div class="lg:grid lg:grid-cols-2 flex flex-col gap-50px mt-[23px]">
+                        <i class="mb-[23px]">Nell Spies</i>
+                            <i class="mb-[23px]">coördinator</i>
+                        <i class="mb-[23px]">Hanneke Vellinga</i>
+                            <i class="mb-[23px]"> </i>
+                        <i class="mb-[23px]">Gerard Feith</i>
+                            <i class="mb-[23px]">beheerder website</i>
+                        <i class="mb-[23px]">Nel Hederik</i>
+                            <i class="mb-[23px]">ledenadminstratie, Lief en Leed</i>
+                        <i class="mb-[23px]">Grethe Heshusius</i>
+                            <i class="mb-[23px]">nieuwsbrief, inhoud website</i>
+                        <i class="mb-[23px]">Jan Gerritsen</i>
+                            <i class="mb-[23px]">nieuwsbrief, website</i>
+                    </div>
+            </div>
+
+            <!-- aanmelden -->
+            <div id="aanmelden" class="lg:col-span-2 lg:col-start-4 lg:row-start-2 bg-white py-[23px] px-[50px] rounded-3xl shadow-md shadow-black/25">
+                <h1 class="text-3xl font-bold pb-[23px] border-b border-black">Aanmelden</h1>
+                <form class="mt-[23px] space-y-3 flex flex-col items-center">
+                    <div class="flex flex-row w-full justify-between">
+                        <input type="text" class="py-[10px] px-[20px] max-w-[120px] lg:max-w-[150px] bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Achternaam">
+                        <input type="text" class="py-[10px] px-[20px] max-w-[120px] lg:max-w-[150px] bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Voorletters">
+                    </div>
+                    <input type="text" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Adres">
+                    <input type="text" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Postcode + Plaatsnaam">
+                    <input type="number" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="telefoonnummer">
+                    <input type="email" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="E-mail">
+                    <input type="text" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Geboortedatum" onfocus="(this.type='date')">
+                    <input type="text" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Sector/Afdeling">
+                    <input type="text" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Gewenste datum start lidmaatschap" onfocus="(this.type='date')">
+                    <button type="submit" class="text-xl text-white font-bold bg-red-700 py-[9px] px-[35px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Aanmelden</button>
+                </form>
+            </div>
+
+            <!-- afmelden -->
+            <div class="lg:col-span-2 lg:col-start-4 lg:row-start-2 bg-white py-[23px] px-[50px] rounded-3xl shadow-md shadow-black/25">
+                <h1 class="text-3xl font-bold pb-[23px] border-b border-black">Afmelden</h1>
+                <form class="mt-[23px] space-y-3 flex flex-col items-center">
+                    <div class="flex flex-row w-full justify-between">
+                        <input type="text" class="py-[10px] px-[20px] max-w-[120px] lg:max-w-[150px] bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Achternaam">
+                        <input type="text" class="py-[10px] px-[20px] max-w-[120px] lg:max-w-[150px] bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Voorletters">
+                    </div>
+                    <input type="text" class="py-[10px] px-[20px] w-full bg-neutral-200 rounded-lg placeholder-neutral-600 shadow-inner shadow-black/25 italic" placeholder="Beredenering">
+                    <button type="submit" class="text-xl text-white font-bold bg-red-700 py-[9px] px-[35px] rounded-xl shadow-md shadow-black/25 hover:bg-red-900 focus:bg-red-900">Afmelden</button>
+                </form>
+            </div>
+
+            <!-- Contact opnemen -->
+            <div class="lg:col-span-2 lg:col-start-4 lg:row-start-2 bg-white py-[23px] px-[50px] rounded-3xl shadow-md shadow-black/25">
+                <h1 class="text-3xl font-bold pb-[23px] border-b border-black">Contact</h1>
+                <p class="mt-[23px]">
+                    VOM Aventus<br>p/a Aventus<br>Postbus 387<br>7300 AJ Apeldoorn<br><br>E-mailadressen:<br>
+                    <a class="text-red-700 underline" href="mailto:algemeen@vom-aventus.nl">algemeen@vom-aventus.nl</a><br>
+                    <a class="text-red-700 underline" href="mailto:activiteit@vom-aventus.nl">activiteit@vom-aventus.nl</a> - voor alles wat gerelateerd is aan de activiteiten en de 
+                    activiteitencommissie<br>
+                    <a class="text-red-700 underline" href="mailto:niewsbrief@vom-aventus.nl">nieuwsbrief@vom-aventus.nl</a> - voor alles wat 
+                    gerelateerd is aan de nieuwsbrief<br><br>Opsturen per post kan ook: (geen postzegel nodig)<br>VOM Aventus<br>
+                    Antwoordnummer 618<br>Apeldoorn<br><br>Bankrekening voor contributie en activiteiten (voor activiteiten altijd datum 
+                    en activiteit vermelden!)NL16 INGB 0003290651 t.n.v. Vereniging van Oud-medewerkers ROC Aventus
+                </p>
+            </div>
+        </div>
+    </content>
+    <footer class="bg-red-700 w-full text-end lg:mt-[-100px]">
+        <p class="lg:text-xl text text-white mx-[100px] py-[5px]">Met trots aangedreven door WordPress. Ontworpen door Iza Maes.</p>
+    </footer>
+</body>
+</html>
